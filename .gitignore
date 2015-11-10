@@ -27,5 +27,6 @@
 *.out
 *.app
 
-build/
-obj/
+# Directories
+build
+obj
