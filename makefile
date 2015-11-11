@@ -23,7 +23,7 @@ SUFFIX = "$(NO_COLOR)"
 
 all: clean linking osx
 	@echo $(PREFIX) Build finished $(SUFFIX)
-
+http://cdn.appstorm.net/mac.appstorm.net/files/2012/04/Untitled-thumb.png
 clean:
 	@echo $(PREFIX) Cleaning up $(SUFFIX)
 	rm -rfv $(BUIDIR) $(OBJDIR)
@@ -56,6 +56,7 @@ osx: $(BUIDIR)/$(APP) $(OSXDIR)/Info.plist
 	@#cp $(OSXDIR)/version.plist $(APP).app/Contents/
 	@#cp $(OSXDIR)/InfoPlist.strings $(APP).app/Contents/Resources/English.lproj/
 	@#cp $(OSXDIR)/Icons.icns AnotherResource.txt $(APP).app/Contents/Resources/
+	cp $(OSXDIR)/Icons.icns $(BUIDIR)/$(APP).app/Contents/Resources/
 	cp $(BUIDIR)/$(APP) $(BUIDIR)/$(APP).app/Contents/MacOS/$(APP)
 	echo -n 'APPL????' > $(BUIDIR)/$(APP).app/Contents/PkgInfo
 
